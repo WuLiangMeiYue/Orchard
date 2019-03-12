@@ -34,6 +34,7 @@ cmake-build-release/
 
 # IntelliJ
 out/
+Orchard.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -95,3 +96,4 @@ src/main/java/com/orchard/api/dao/
 src/main/java/com/orchard/api/entity/
 src/main/java/com/orchard/api/service/
 src/main/webapp/WEB-INF/page/
+

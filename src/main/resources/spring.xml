@@ -66,13 +66,13 @@
     <!-- 响应处理，视图处理器配制 -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/resources/page/"/>
+        <property name="prefix" value="/page/"/>
         <property name="suffix" value=".html"/>
     </bean>
 
     <!-- 默认静态资源的请求处理 -->
     <mvc:default-servlet-handler/>
-    <mvc:resources location="js, css, fonts, img, scss" mapping="/js/**, /css/**, /fonts/**, /img/**, /scss/**"/>
+    <mvc:resources location="js, css, fonts, img, scss, page" mapping="/js/**, /css/**, /fonts/**, /img/**, /scss/**, /page/**"/>
     <mvc:annotation-driven/>
 
 </beans>
