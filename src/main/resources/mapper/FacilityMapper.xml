@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.orchard.api.mapper.UserMapper">
+<mapper namespace="com.orchard.api.mapper.FacilityMapper">
 
-    <resultMap id="userBean" type="com.orchard.api.entity.User">
+    <resultMap id="userBean" type="com.orchard.api.entity.Facility">
         <id column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" property="userId"/>
         <result property="userName" column="user_name" javaType="java.lang.String"/>
         <result property="userPassword" column="user_password" javaType="java.lang.String"/>
