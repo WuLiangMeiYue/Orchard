@@ -7,4 +7,6 @@ import java.util.List;
 public interface ThresholdMapper {
 
     List<Threshold> findAll();
+
+    Threshold findOneById(long id);
 }

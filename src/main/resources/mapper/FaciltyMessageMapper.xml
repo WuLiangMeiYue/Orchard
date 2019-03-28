@@ -16,6 +16,11 @@
     </resultMap>
     
     <select id="findAll" resultMap="userBean">
-        select * from user;
+        select * from orchard.facility_message;
     </select>
+
+    <select id="findOneById" resultMap="userBean" parameterType="java.lang.Long">
+        select * from orchard.facility_message fm where fm.facility_message_id=#{id};
+    </select>
+
 </mapper>

@@ -15,6 +15,11 @@
     </resultMap>
     
     <select id="findAll" resultMap="userBean">
-        select * from user;
+        select * from orchard.Threshold;
     </select>
+
+    <select id="findOneById" resultMap="userBean" parameterType="java.lang.Long">
+        select * from orchard.Threshold where threshold_id=#{id}
+    </select>
+
 </mapper>

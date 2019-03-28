@@ -8,4 +8,5 @@ public interface PermissionMapper {
 
     List<Permission> findAll();
 
+    Permission findOneById(long id);
 }

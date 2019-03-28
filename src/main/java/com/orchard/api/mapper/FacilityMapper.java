@@ -8,4 +8,6 @@ public interface FacilityMapper {
 
     List<Facility> findAll();
 
+    Facility findOneById(long id);
+
 }

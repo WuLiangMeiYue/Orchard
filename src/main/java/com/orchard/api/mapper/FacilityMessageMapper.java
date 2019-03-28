@@ -8,4 +8,5 @@ public interface FacilityMessageMapper {
 
     List<FacilityMessage> findAll();
 
+    FacilityMessage findOneById(long id);
 }
