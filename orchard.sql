@@ -1,3 +1,5 @@
+create database orchard;
+use orchard;
 create table facility
 (
   facility_id   bigint auto_increment comment '主键ID'
