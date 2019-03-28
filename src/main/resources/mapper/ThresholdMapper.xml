@@ -2,13 +2,16 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.orchard.api.mapper.UserMapper">
+<mapper namespace="com.orchard.api.mapper.ThresholdMapper">
 
-    <resultMap id="userBean" type="com.orchard.api.entity.User">
-        <id column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" property="userId"/>
-        <result property="userName" column="user_name" javaType="java.lang.String"/>
-        <result property="userPassword" column="user_password" javaType="java.lang.String"/>
-        <result property="userCode" column="user_code" javaType="java.lang.String"/>
+    <resultMap id="userBean" type="com.orchard.api.entity.Threshold">
+        <id column="threshold_id" javaType="java.lang.Long" jdbcType="BIGINT" property="thresholdId"/>
+        <result property="thresholdTemperature" column="threshold_temperature" javaType="java.lang.String"/>
+        <result property="thresholdHhumidity" column="threshold_humidity" javaType="java.lang.String"/>
+        <result property="thresholdIlluminance" column="threshold_illuminance" javaType="java.lang.String"/>
+        <result property="thresholdSoil" column="threshold_soil" javaType="java.lang.String"/>
+        <result property="thresholdPrecipitation" column="threshold_precipitation" javaType="java.lang.String"/>
+        <result property="facilityCode" column="threshold_code" javaType="java.lang.String"/>
     </resultMap>
     
     <select id="findAll" resultMap="userBean">

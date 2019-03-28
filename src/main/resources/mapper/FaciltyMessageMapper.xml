@@ -2,13 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.orchard.api.mapper.UserMapper">
+<mapper namespace="com.orchard.api.mapper.FacilityMessageMapper">
 
-    <resultMap id="userBean" type="com.orchard.api.entity.User">
-        <id column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" property="userId"/>
-        <result property="userName" column="user_name" javaType="java.lang.String"/>
-        <result property="userPassword" column="user_password" javaType="java.lang.String"/>
-        <result property="userCode" column="user_code" javaType="java.lang.String"/>
+    <resultMap id="userBean" type="com.orchard.api.entity.FacilityMessage">
+        <id property="facilityMessageId" column="facility_message_id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="facilityMessageCode" column="facility_message_code" javaType="java.lang.String"/>
+        <result property="facilityMessageTime" column="facility_message_time" javaType="java.lang.String"/>
+        <result property="facilityMessageTemperature" column="facility_message_temperature" javaType="java.lang.String"/>
+        <result property="facilityMessageHumidity" column="facility_message_humidity" javaType="java.lang.String"/>
+        <result property="facilityMessageIlluminance" column="facility_message_illuminance" javaType="java.lang.String"/>
+        <result property="facilityMessageSoil" column="facility_message_soil" javaType="java.lang.String"/>
+        <result property="facilityMessagePrecipitation" column="facility_message_precipitation" javaType="java.lang.String"/>
     </resultMap>
     
     <select id="findAll" resultMap="userBean">

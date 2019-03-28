@@ -5,10 +5,10 @@
 <mapper namespace="com.orchard.api.mapper.FacilityMapper">
 
     <resultMap id="userBean" type="com.orchard.api.entity.Facility">
-        <id column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" property="userId"/>
-        <result property="userName" column="user_name" javaType="java.lang.String"/>
-        <result property="userPassword" column="user_password" javaType="java.lang.String"/>
-        <result property="userCode" column="user_code" javaType="java.lang.String"/>
+        <id property="facilityId" column="facility_id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="facilityName" column="facility_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="facilityCode" column="facility_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="facilityIp" column="facility_ip" javaType="java.lang.String" jdbcType="VARCHAR"/>
     </resultMap>
     
     <select id="findAll" resultMap="userBean">

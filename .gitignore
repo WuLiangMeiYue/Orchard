@@ -92,8 +92,3 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 
 .idea/
-src/main/java/com/orchard/api/dao/
-src/main/java/com/orchard/api/entity/
-src/main/java/com/orchard/api/service/
-src/main/webapp/WEB-INF/page/
-
