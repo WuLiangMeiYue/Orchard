@@ -1,3 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://"
++ request.getServerName() + ":" + request.getServerPort()
++ path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +20,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="/css/demo.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -36,49 +43,49 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.jsp">
                         <i class="now-ui-icons design_app"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="icons.jsp">
                         <i class="now-ui-icons education_atom"></i>
                         <p>Icons</p>
                     </a>
                 </li>
-                <li>
-                    <a href="map.html">
+                <li class="active">
+                    <a href="map.jsp">
                         <i class="now-ui-icons location_map-big"></i>
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="notifications.jsp">
                         <i class="now-ui-icons ui-1_bell-53"></i>
                         <p>Notifications</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="user.jsp">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
                 <li>
-                    <a href="tables.html">
+                    <a href="../tables.html">
                         <i class="now-ui-icons design_bullet-list-67"></i>
                         <p>Table List</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="typography.html">
+                <li>
+                    <a href="typography.jsp">
                         <i class="now-ui-icons text_caps-small"></i>
                         <p>Typography</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="upgrade.jsp">
                         <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                         <p>Upgrade to PRO</p>
                     </a>
@@ -98,7 +105,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Typography</a>
+                    <a class="navbar-brand" href="#pablo">Maps</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,107 +163,12 @@
         <div class="content">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="title">Now Ui Table Heading</h5>
-                            <p class="category">Created using Montserrat Font Family</p>
+                    <div class="card ">
+                        <div class="card-header ">
+                            Google Maps
                         </div>
-                        <div class="card-body">
-                            <div class="typography-line">
-                                <h1>
-                                    <span>Header 1</span>The Life of Now Ui Dashboard </h1>
-                            </div>
-                            <div class="typography-line">
-                                <h2>
-                                    <span>Header 2</span>The Life of Now Ui Dashboard </h2>
-                            </div>
-                            <div class="typography-line">
-                                <h3>
-                                    <span>Header 3</span>The Life of Now Ui Dashboard </h3>
-                            </div>
-                            <div class="typography-line">
-                                <h4>
-                                    <span>Header 4</span>The Life of Now Ui Dashboard </h4>
-                            </div>
-                            <div class="typography-line">
-                                <h5>
-                                    <span>Header 5</span>The Life of Now Ui Dashboard </h5>
-                            </div>
-                            <div class="typography-line">
-                                <h6>
-                                    <span>Header 6</span>The Life of Now Ui Dashboard </h6>
-                            </div>
-                            <div class="typography-line">
-                                <p>
-                                    <span>Paragraph</span>
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers. I understand culture. I am the nucleus. I think that’s a
-                                    responsibility that I have, to push possibilities, to show people, this is the level
-                                    that things could be at.
-                                </p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Quote</span>
-                                <blockquote>
-                                    <p class="blockquote blockquote-primary">
-                                        "I will be the leader of a company that ends up being worth billions of dollars,
-                                        because I got the answers. I understand culture. I am the nucleus. I think
-                                        that’s a responsibility that I have, to push possibilities, to show people, this
-                                        is the level that things could be at."
-                                        <br>
-                                        <br>
-                                        <small>
-                                            - Noaa
-                                        </small>
-                                    </p>
-                                </blockquote>
-                            </div>
-                            <div class="typography-line">
-                                <span>Muted Text</span>
-                                <p class="text-muted">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers...
-                                </p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Primary Text</span>
-                                <p class="text-primary">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers...</p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Info Text</span>
-                                <p class="text-info">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers... </p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Success Text</span>
-                                <p class="text-success">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers... </p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Warning Text</span>
-                                <p class="text-warning">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers...
-                                </p>
-                            </div>
-                            <div class="typography-line">
-                                <span>Danger Text</span>
-                                <p class="text-danger">
-                                    I will be the leader of a company that ends up being worth billions of dollars,
-                                    because I got the answers... </p>
-                            </div>
-                            <div class="typography-line">
-                                <h2>
-                                    <span>Small Tag</span>
-                                    Header with small subtitle
-                                    <br>
-                                    <small>Use "small" tag for the headers</small>
-                                </h2>
-                            </div>
+                        <div class="card-body ">
+                            <div id="map" class="map"></div>
                         </div>
                     </div>
                 </div>
@@ -283,35 +195,31 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    , Designed by
-                    Invision. Coded by
-                    Creative Tim.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-                    - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-                </div>
+
             </div>
         </footer>
     </div>
 </div>
 </body>
 <!--   Core JS Files   -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js//bootstrap.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
 
 <!-- Chart JS -->
-<script src="/js/chartjs.min.js"></script>
+<script src="js/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
-<script src="/js/bootstrap-notify.js"></script>
+<script src="js/bootstrap-notify.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/js/now-ui-dashboard.js?v=1.0.1"></script>
+<script src="js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-<script src="/js/demo.js"></script>
+<script src="js/demo.js"></script>
+<script>
+    $(document).ready(function () {
+        demo.initGoogleMaps();
+    });
+</script>
 
 </html>

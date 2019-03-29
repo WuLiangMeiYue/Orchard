@@ -1,3 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://"
++ request.getServerName() + ":" + request.getServerPort()
++ path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +20,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="/Orchard_war/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/Orchard_war/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="/Orchard_war/css/demo.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -35,50 +42,50 @@
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
+                <li>
+                    <a href="dashboard.jsp">
                         <i class="now-ui-icons design_app"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="icons.jsp">
                         <i class="now-ui-icons education_atom"></i>
                         <p>Icons</p>
                     </a>
                 </li>
                 <li>
-                    <a href="map.html">
+                    <a href="map.jsp">
                         <i class="now-ui-icons location_map-big"></i>
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="notifications.jsp">
                         <i class="now-ui-icons ui-1_bell-53"></i>
                         <p>Notifications</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="user.jsp">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
-                <li>
-                    <a href="tables.html">
+                <li class="active">
+                    <a href="tables.jsp">
                         <i class="now-ui-icons design_bullet-list-67"></i>
                         <p>Table List</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="typography.jsp">
                         <i class="now-ui-icons text_caps-small"></i>
                         <p>Typography</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="upgrade.jsp">
                         <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                         <p>Upgrade to PRO</p>
                     </a>
@@ -98,7 +105,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Dashboard</a>
+                    <a class="navbar-brand" href="#pablo">Table List</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,198 +158,14 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="panel-header panel-header-lg">
-            <canvas id="bigDashboardChart"></canvas>
+        <div class="panel-header panel-header-sm">
         </div>
         <div class="content">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="card card-chart">
-                        <div class="card-header">
-                            <h5 class="card-category">Global Sales</h5>
-                            <h4 class="card-title">Shipped Products</h4>
-                            <div class="dropdown">
-                                <button type="button"
-                                        class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret"
-                                        data-toggle="dropdown">
-                                    <i class="now-ui-icons loader_gear"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="chart-area">
-                                <canvas id="lineChartExample"></canvas>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header">
-                            <h5 class="card-category">2018 Sales</h5>
-                            <h4 class="card-title">All products</h4>
-                            <div class="dropdown">
-                                <button type="button"
-                                        class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret"
-                                        data-toggle="dropdown">
-                                    <i class="now-ui-icons loader_gear"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="chart-area">
-                                <canvas id="lineChartExampleWithNumbersAndGrid"></canvas>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header">
-                            <h5 class="card-category">Email Statistics</h5>
-                            <h4 class="card-title">24 Hours Performance</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="chart-area">
-                                <canvas id="barChartSimpleGradientsNumbers"></canvas>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card card-tasks">
-                        <div class="card-header">
-                            <h5 class="card-category">Backend development</h5>
-                            <h4 class="card-title">Tasks</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-full-width table-responsive">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input" type="checkbox" checked="">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-
-                                        <td class="text-left">Sign contract for "What are conference organizers afraid
-                                            of?"
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Edit Task">
-                                                <i class="now-ui-icons ui-2_settings-90"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Remove">
-                                                <i class="now-ui-icons ui-1_simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input" type="checkbox">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-
-                                        <td class="text-left">Lines From Great Russian Literature? Or E-mails From My
-                                            Boss?
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Edit Task">
-                                                <i class="now-ui-icons ui-2_settings-90"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Remove">
-                                                <i class="now-ui-icons ui-1_simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input" type="checkbox" checked="">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-
-                                        <td class="text-left">Flooded: One year later, assessing what was lost and what
-                                            was found when a ravaging rain swept through metro Detroit
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Edit Task">
-                                                <i class="now-ui-icons ui-2_settings-90"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title=""
-                                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Remove">
-                                                <i class="now-ui-icons ui-1_simple-remove"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <hr>
-                            <div class="stats">
-                                <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-category">All Persons List</h5>
-                            <h4 class="card-title"> Employees Stats</h4>
+                            <h4 class="card-title"> Simple Table</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -406,6 +229,20 @@
                                     </tr>
                                     <tr>
                                         <td>
+                                            Philip Chaney
+                                        </td>
+                                        <td>
+                                            Korea, South
+                                        </td>
+                                        <td>
+                                            Overland Park
+                                        </td>
+                                        <td class="text-right">
+                                            $38,735
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             Doris Greene
                                         </td>
                                         <td>
@@ -430,6 +267,148 @@
                                         </td>
                                         <td class="text-right">
                                             $78,615
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Jon Porter
+                                        </td>
+                                        <td>
+                                            Portugal
+                                        </td>
+                                        <td>
+                                            Gloucester
+                                        </td>
+                                        <td class="text-right">
+                                            $98,615
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-plain">
+                        <div class="card-header">
+                            <h4 class="card-title"> Table on Plain Background</h4>
+                            <p class="category"> Here is a subtitle for this table</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Country
+                                    </th>
+                                    <th>
+                                        City
+                                    </th>
+                                    <th class="text-right">
+                                        Salary
+                                    </th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Dakota Rice
+                                        </td>
+                                        <td>
+                                            Niger
+                                        </td>
+                                        <td>
+                                            Oud-Turnhout
+                                        </td>
+                                        <td class="text-right">
+                                            $36,738
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Minerva Hooper
+                                        </td>
+                                        <td>
+                                            Curaçao
+                                        </td>
+                                        <td>
+                                            Sinaai-Waas
+                                        </td>
+                                        <td class="text-right">
+                                            $23,789
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Sage Rodriguez
+                                        </td>
+                                        <td>
+                                            Netherlands
+                                        </td>
+                                        <td>
+                                            Baileux
+                                        </td>
+                                        <td class="text-right">
+                                            $56,142
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Philip Chaney
+                                        </td>
+                                        <td>
+                                            Korea, South
+                                        </td>
+                                        <td>
+                                            Overland Park
+                                        </td>
+                                        <td class="text-right">
+                                            $38,735
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Doris Greene
+                                        </td>
+                                        <td>
+                                            Malawi
+                                        </td>
+                                        <td>
+                                            Feldkirchen in Kärnten
+                                        </td>
+                                        <td class="text-right">
+                                            $63,542
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Mason Porter
+                                        </td>
+                                        <td>
+                                            Chile
+                                        </td>
+                                        <td>
+                                            Gloucester
+                                        </td>
+                                        <td class="text-right">
+                                            $78,615
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Jon Porter
+                                        </td>
+                                        <td>
+                                            Portugal
+                                        </td>
+                                        <td>
+                                            Gloucester
+                                        </td>
+                                        <td class="text-right">
+                                            $98,615
                                         </td>
                                     </tr>
                                     </tbody>
@@ -461,40 +440,25 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    , Designed by
-                    Invision. Coded by
-                    Creative Tim.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-                    - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-                </div>
             </div>
         </footer>
     </div>
 </div>
 </body>
 <!--   Core JS Files   -->
-<script src="/Orchard_war/js/jquery.min.js"></script>
-<script src="/Orchard_war/js/popper.min.js"></script>
-<script src="/Orchard_war/js/bootstrap.min.js"></script>
-<script src="/Orchard_war/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
+
 <!-- Chart JS -->
-<script src="/Orchard_war/js/chartjs.min.js"></script>
+<script src="js/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
-<script src="/Orchard_war/js/bootstrap-notify.js"></script>
+<script src="js/bootstrap-notify.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/Orchard_war/js/now-ui-dashboard.js?v=1.0.1"></script>
+<script src="js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-<script src="/Orchard_war/js/demo.js"></script>
-<script>
-    $(document).ready(function () {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-    });
-</script>
+<script src="js/demo.js"></script>
 
 </html>

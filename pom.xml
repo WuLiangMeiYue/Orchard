@@ -15,8 +15,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <spring.version>4.3.2.RELEASE</spring.version>
     <log4j.version>2.5</log4j.version>
     <jstl.version>1.2</jstl.version>
@@ -105,15 +105,13 @@
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
-      <version>${mybatis.version}</version>
-      <scope>runtime</scope>
+      <version>3.4.1</version>
     </dependency>
 
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>${mybatis.spring.version}</version>
-      <scope>runtime</scope>
     </dependency>
 
     <!-- dbcp2数据源的jar包 -->

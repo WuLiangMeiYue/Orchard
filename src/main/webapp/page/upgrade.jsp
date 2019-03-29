@@ -1,3 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://"
++ request.getServerName() + ":" + request.getServerPort()
++ path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +20,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="/css/demo.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -36,49 +43,49 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.jsp">
                         <i class="now-ui-icons design_app"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="icons.jsp">
                         <i class="now-ui-icons education_atom"></i>
                         <p>Icons</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="map.html">
+                <li>
+                    <a href="map.jsp">
                         <i class="now-ui-icons location_map-big"></i>
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="notifications.jsp">
                         <i class="now-ui-icons ui-1_bell-53"></i>
                         <p>Notifications</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="user.jsp">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../tables.html">
+                    <a href="tables.jsp">
                         <i class="now-ui-icons design_bullet-list-67"></i>
                         <p>Table List</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="typography.jsp">
                         <i class="now-ui-icons text_caps-small"></i>
                         <p>Typography</p>
                     </a>
                 </li>
-                <li class="active-pro">
-                    <a href="upgrade.html">
+                <li class="active active-pro">
+                    <a href="upgrade.jsp">
                         <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                         <p>Upgrade to PRO</p>
                     </a>
@@ -98,7 +105,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Maps</a>
+                    <a class="navbar-brand" href="#pablo">Upgrade to PRO</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,13 +162,86 @@
         </div>
         <div class="content">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card ">
-                        <div class="card-header ">
-                            Google Maps
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="card card-upgrade">
+                        <div class="card-header text-center">
+                            <h4 class="card-title">Now UI Dashboard PRO</h3>
+                                <p class="card-category">Are you looking for more components? Please check our Premium
+                                    Version of Now UI Dashboard PRO.</p>
                         </div>
-                        <div class="card-body ">
-                            <div id="map" class="map"></div>
+                        <div class="card-body">
+                            <div class="table-responsive table-upgrade">
+                                <table class="table">
+                                    <thead>
+                                    <th></th>
+                                    <th class="text-center">Free</th>
+                                    <th class="text-center">PRO</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Components</td>
+                                        <td class="text-center">16</td>
+                                        <td class="text-center">160</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Plugins</td>
+                                        <td class="text-center">3</td>
+                                        <td class="text-center">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Example Pages</td>
+                                        <td class="text-center">7</td>
+                                        <td class="text-center">27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Login, Register, Pricing, Lock Pages</td>
+                                        <td class="text-center"><i
+                                                class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
+                                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>DataTables, VectorMap, SweetAlert, Wizard, jQueryValidation, FullCalendar
+                                            etc...
+                                        </td>
+                                        <td class="text-center"><i
+                                                class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
+                                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mini Sidebar</td>
+                                        <td class="text-center"><i
+                                                class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
+                                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Premium Support</td>
+                                        <td class="text-center"><i
+                                                class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
+                                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="text-center">Free</td>
+                                        <td class="text-center">Just $49</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"></td>
+                                        <td class="text-center">
+                                            <a href="#" class="btn btn-round btn-default disabled">Current Version</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a target="_blank"
+                                               href="#/product/now-ui-dashboard-pro?ref=nud-free-upgrade-live"
+                                               class="btn btn-round btn-primary">Upgrade to PRO</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,41 +268,26 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    , Designed by
-                    Invision. Coded by
-                    Creative Tim.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-                    - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-                </div>
+
             </div>
         </footer>
     </div>
 </div>
 </body>
 <!--   Core JS Files   -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins//perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
 
 <!-- Chart JS -->
-<script src="/js/chartjs.min.js"></script>
+<script src="js/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
-<script src="/js/bootstrap-notify.js"></script>
+<script src="js/bootstrap-notify.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/js/now-ui-dashboard.js?v=1.0.1"></script>
+<script src="js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-<script src="/js/demo.js"></script>
-<script>
-    $(document).ready(function () {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initGoogleMaps();
-    });
-</script>
+<script src="js/demo.js"></script>
 
 </html>

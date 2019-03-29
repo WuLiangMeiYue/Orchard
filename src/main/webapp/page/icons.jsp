@@ -1,3 +1,11 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://"
++ request.getServerName() + ":" + request.getServerPort()
++ path + "/";
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +21,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/now-ui-dashboard.css?v=1.0.1" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="/css/demo.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -36,49 +44,49 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.jsp">
                         <i class="now-ui-icons design_app"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="icons.html">
+                    <a href="icons.jsp">
                         <i class="now-ui-icons education_atom"></i>
                         <p>Icons</p>
                     </a>
                 </li>
                 <li>
-                    <a href="map.html">
+                    <a href="map.jsp">
                         <i class="now-ui-icons location_map-big"></i>
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="notifications.jsp">
                         <i class="now-ui-icons ui-1_bell-53"></i>
                         <p>Notifications</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="user.jsp">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
                 <li>
-                    <a href="tables.html">
+                    <a href="tables.jsp">
                         <i class="now-ui-icons design_bullet-list-67"></i>
                         <p>Table List</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="typography.jsp">
                         <i class="now-ui-icons text_caps-small"></i>
                         <p>Typography</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="upgrade.jsp">
                         <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                         <p>Upgrade to PRO</p>
                     </a>
@@ -792,35 +800,26 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    , Designed by
-                    Invision. Coded by
-                    Creative Tim.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
-                    - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-                </div>
+
             </div>
         </footer>
     </div>
 </div>
 </body>
 <!--   Core JS Files   -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
 
 <!-- Chart JS -->
-<script src="/js/chartjs.min.js"></script>
+<script src="js/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
-<script src="/js/bootstrap-notify.js"></script>
+<script src="js/bootstrap-notify.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/js/now-ui-dashboard.js?v=1.0.1"></script>
+<script src="js/now-ui-dashboard.js?v=1.0.1"></script>
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-<script src="/js/demo.js"></script>
+<script src="js/demo.js"></script>
 
 </html>
